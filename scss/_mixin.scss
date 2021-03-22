@@ -1,0 +1,513 @@
+// RWD
+@mixin web-XL {
+    @media (max-width: $web-XL) {
+        @content;
+    }
+}
+@mixin web-L {
+    @media (max-width: $web-L) {
+        @content;
+    }
+}
+@mixin web-S {
+    @media (max-width: $web-S) {
+        @content;
+    }
+}
+@mixin pad {
+    @media (max-width: $pad) {
+        @content;
+    }
+}
+@mixin mobile-L {
+    @media (max-width: $mobile-L) {
+        @content;
+    }
+}
+@mixin mobile-S {
+    @media (max-width: $mobile-S) {
+        @content;
+    }
+}
+@mixin mobile-XS {
+    @media (max-width: $mobile-XS) {
+        @content;
+    }
+}
+// 通用
+@mixin all() {
+    font-family: "微軟正黑體" !important;
+    box-sizing: border-box !important;
+
+    h1 {
+        font-size: $size-h1;
+        color: $title-BK;
+        letter-spacing: 0.7px;
+        padding: 0;
+        margin: 0;
+    }
+    h2 {
+        font-size: $size-h2;
+        color: $title-BK;
+        padding: 0;
+        margin: 0;
+        line-height: $size-h2 * 2;
+    }
+    h3 {
+        font-size: $size-h3;
+        color: $title-BK;
+        padding: 0;
+        margin: 0;
+        line-height: $size-h3 * 2;
+    }
+    h4 {
+        font-size: $size-h4;
+        color: $text;
+        padding: 0;
+        margin: 0;
+    }
+    p {
+        font-size: $size-p;
+        color: $text;
+        padding: 0;
+        margin: 0;
+        line-height: $size-p * 2;
+        font-weight: 500;
+        text-align: justify;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    a {
+        text-decoration: none !important;
+        list-style: none !important;
+        color: $blue;
+        font-weight: bold !important;
+        &:hover {
+            transition: 0.3s;
+            filter: opacity(0.7);
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold;
+    }
+    //font-awesome
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fad,
+    .fab {
+        font-family: "Font Awesome 5 Free" !important;
+    }
+    .clearfix {
+        clear: both;
+    }
+    .notice {
+        color: $red;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo-single{
+            width: 35px;
+            height: 35px;
+            margin-right: $margin-XS/2;
+        }
+    }
+
+    //清除預設按鈕樣式
+    input[type="button"],
+    select {
+        -webkit-appearance: none; /* Safari & Chrome */
+        -moz-appearance: none; /* FireFox */
+        appearance: none;
+    }
+    //表單
+    label {
+        width: 25%;
+        height: 30px;
+        font-size: $size-h4;
+        color: $text;
+        line-height: 30px;
+        text-align: left;
+        font-weight: bold;
+        @include mobile-L() {
+            width: 30%;
+            margin: $margin-XS/1.5 0;
+            margin-bottom: $margin-XS/2.5;
+        }
+    }
+    input {
+        width: 75%;
+        height: 30px;
+        line-height: 30px;
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: #dcdcdd;
+        font-size: $size-p;
+        margin-bottom: $margin-XS/1.5;
+        @include mobile-L() {
+            width: 70%;
+            margin: $margin-XS/1.5 0;
+            margin-top: 0;
+        }
+        &[type="submit"],
+        &[type="reset"],
+        &[type="button"] {
+            height: 40px;
+            background-color: $blue;
+            color: $title-W;
+            font-size: $size-p;
+            font-weight: bold !important;
+            line-height: 40px;
+            border: none;
+            padding: 0;
+            text-decoration: none;
+            margin-top: $margin-XS;
+            cursor: pointer !important;
+            border-radius: 5px;
+            padding: 0 $padding-XS/1.5;
+        }
+        &[disabled] {
+            background-color: $light-sky;
+            &:hover {
+                background-color: $light-sky;
+            }
+        }
+        &[type="file"] {
+            border: none;
+            padding: 0;
+        }
+        &:hover {
+            transition: 0.3s;
+            filter: opacity(0.9);
+        }
+        &:focus {
+            border-color: #61b0e5;
+            transition: 0.5s;
+        }
+    }
+    ::placeholder {
+        color: rgba($color: $gray, $alpha: 0.6);
+    }
+    button {
+        height: 40px;
+        background-color: $blue;
+        color: $title-W;
+        font-size: $size-p;
+        font-weight: bold !important;
+        line-height: 40px;
+        border: none;
+        padding: 0;
+        text-decoration: none;
+        margin-top: $margin-XS;
+        cursor: pointer !important;
+        border-radius: 5px;
+        padding: 0 $padding-XS/1.5;
+        &:hover {
+            transition: 0.3s;
+            filter: opacity(0.9);
+        }
+    }
+    select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 40px;
+        background: url("/img/chevron-down-solid.svg") no-repeat scroll transparent;
+        background-position: 98% center;
+        background-color: #fff;
+        color: #000;
+        border: solid 1px #000;
+    }
+
+    table:not(.ui-datepicker-calendar) {
+        table-layout: fixed;
+        width: 100%;
+        border: 1px solid rgba(0, 123, 255, 0.2);
+        border-collapse: collapse;
+        th,
+        td {
+            border: 1px solid rgba(0, 123, 255, 0.2);
+            padding: $padding-XXS/1.5;
+        }
+        th {
+            background-color: rgba(0, 123, 255, 0.2);
+        }
+        tr:nth-child(even) {
+            background-color: rgba(0, 123, 255, 0.05);
+        }
+        td {
+            word-wrap: break-word;
+        }
+        @include mobile-L() {
+            border: none;
+
+            thead {
+                display: none;
+            }
+            td:before {
+                width: 100%;
+                display: block;
+                content: attr(data-title);
+                font-weight: bold;
+                font-size: 1.125rem;
+                text-align: left;
+                margin-bottom: $margin-XS/2.5;
+            }
+            td {
+                display: block;
+                flex-wrap: wrap;
+                text-align: left !important;
+                padding: $padding-XXS;
+            }
+            tr {
+                display: block;
+                margin-bottom: 30px !important;
+            }
+            tr:nth-child(even) {
+                background-color: unset;
+            }
+            td:nth-child(odd) {
+                background-color: rgba(0, 123, 255, 0.05);
+            }
+        }
+    }
+    .table-column {
+        td:before {
+            width: 100%;
+            display: block;
+            content: attr(data-title);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        td {
+            min-height: 40px;
+        }
+        @include mobile-L() {
+            td:before {
+                text-align: left;
+            }
+            tr {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+    .container {
+        margin-top: $margin-XS;
+        width: calc(100vw - 17px);
+        min-height: calc(100vh - 88px);
+        background-color: #fff;
+        padding: $padding-XS;
+        padding-bottom: $padding-XS * 1.5;
+    }
+
+    //頁碼
+    .pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: $margin-S;
+        white-space: nowrap;
+        @include mobile-L() {
+            justify-content: center;
+            text-align: left;
+            white-space: unset;
+            margin-top: $margin-XS/2;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline;
+                text-decoration: none;
+                padding: 0;
+                a {
+                    display: inline;
+                    padding: 5px 12px;
+                    border: solid 1px rgba($color: $gray, $alpha: 0.3);
+                    margin: -2px;
+                    font-size: $size-p;
+                    color: $gray;
+                    @include mobile-S() {
+                        width: 100%;
+                        padding: 5px 15px;
+                    }
+                    @include mobile-XS() {
+                        width: 100%;
+                        padding: 5px 15px;
+                    }
+                    &:hover {
+                        border: solid 1px $light-sky;
+                    }
+                }
+                .active {
+                    background-color: $gray;
+                    color: $title-W;
+                    border: solid 1px $gray;
+                }
+                .fas {
+                    font-size: $size-p;
+                    // color: $blue;
+                }
+            }
+        }
+    }
+}
+
+@mixin searchbar() {
+    display: flex;
+    justify-content: flex-end;
+    @include mobile-L() {
+        justify-content: flex-start;
+        margin-bottom: $margin-XS;
+    }
+    input[type="search"] {
+        width: 150px;
+        padding: 2px 8px;
+        border-radius: 5px;
+        border: solid 1px rgba($color: $gray, $alpha: 0.5);
+        background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 95% center;
+        @include mobile-L() {
+            width: 100%;
+        }
+        &:focus {
+            width: 180px;
+            transition: 0.5s;
+            outline: none;
+            @include mobile-L() {
+                width: 100%;
+            }
+        }
+    }
+}
+@mixin form() {
+    width: 800px;
+    padding: $padding-XS $padding-S;
+    border-radius: 20px !important;
+    margin: auto;
+    @include web-S {
+        width: 80%;
+        margin-bottom: 0;
+    }
+    @include pad {
+        width: 100%;
+    }
+    @include mobile-L() {
+        border-radius: unset;
+        margin-bottom: 0;
+        padding: 0 $padding-XS/2;
+    }
+
+    .form-gp {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: $margin-XS;
+        text-align: justify;
+        p {
+            width: 100%;
+            font-size: $size-p;
+            line-height: $size-p * 1.7;
+            padding-top: $padding-XXS/2.5;
+        }
+        @include web-S {
+            padding: 0;
+        }
+        @include mobile-L() {
+            flex-direction: column;
+            margin-bottom: $margin-XS/2;
+        }
+
+        label {
+            width: 100%;
+            padding: 0;
+            margin-right: $margin-M;
+            color: $blue;
+            font-size: $size-h4;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+        }
+        input,
+        select {
+            &[type="submit"],
+            &[type="reset"] {
+                width: 100%;
+                height: 40px;
+                background-color: $blue;
+                color: $title-W;
+                font-size: $size-h4;
+                font-weight: bold;
+                line-height: 40px;
+                border: none;
+                border-radius: 20px;
+                padding: 0;
+                text-decoration: none;
+                margin-top: $margin-XS;
+                &:hover {
+                    background-color: $title-BK;
+                }
+            }
+            &[type="button"] {
+                width: 100%;
+                height: 40px;
+                background-color: transparent;
+                border: solid 1px $blue;
+                border-radius: 20px;
+                color: $blue;
+                font-size: $size-h4;
+                font-weight: bold;
+                line-height: 40px;
+                padding: 0;
+                text-decoration: none;
+                margin-top: $margin-XS;
+                &:hover {
+                    background-color: $title-BK;
+                    color: $title-W;
+                    border: solid 1px $title-BK;
+                }
+            }
+            &[disabled] {
+                background-color: $gray;
+            }
+        }
+        textarea {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid $gray;
+            padding: 0 $padding-XXS;
+            color: $text;
+            font-size: $size-h4;
+            line-height: $size-h4 * 1.5;
+        }
+        a {
+            font-size: $size-h4;
+            line-height: $size-h4;
+            margin-top: $margin-XS;
+            color: $blue;
+            font-weight: bold;
+            text-align: center;
+            &:hover {
+                color: $title-BK !important;
+            }
+        }
+    }
+
+    span {
+        color: $red;
+        margin-left: 3px;
+    }
+}
