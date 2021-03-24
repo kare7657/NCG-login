@@ -939,7 +939,24 @@ body .apply-account .container form .form-gp {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 1.25rem;
-  text-align: justify;
+  text-align: left;
+}
+
+body .apply-account .container form .form-gp .w50 {
+  width: 50%;
+}
+
+body .apply-account .container form .form-gp .w50:not(:last-child) {
+  padding-right: 1.875rem;
+}
+
+@media (max-width: 568px) {
+  body .apply-account .container form .form-gp .w50 {
+    width: 100%;
+  }
+  body .apply-account .container form .form-gp .w50:not(:last-child) {
+    padding-right: 0;
+  }
 }
 
 body .apply-account .container form .form-gp p {

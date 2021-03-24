@@ -110,12 +110,12 @@
     .notice {
         color: $red;
     }
-    .title{
+    .title {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        .logo-single{
+        .logo-single {
             width: 35px;
             height: 35px;
             margin-right: $margin-XS/2;
@@ -415,7 +415,19 @@
         flex-wrap: wrap;
         flex-direction: row;
         margin-bottom: $margin-XS;
-        text-align: justify;
+        text-align: left;
+        .w50 {
+            width: 50%;
+            &:not(:last-child) {
+                padding-right: $padding-XS;
+            }
+            @include mobile-L() {
+                width: 100%;
+                &:not(:last-child) {
+                    padding-right: 0;
+                }
+            }
+        }
         p {
             width: 100%;
             font-size: $size-p;
