@@ -1046,6 +1046,11 @@ body .apply-account .container form .form-gp select[disabled] {
   background-color: #9C9D9D;
 }
 
+body .apply-account .container form .form-gp .select2 {
+  width: 100%;
+  margin: 0.625rem 0;
+}
+
 body .apply-account .container form .form-gp textarea {
   width: 100%;
   border-radius: 5px;
@@ -1069,7 +1074,7 @@ body .apply-account .container form .form-gp a:hover {
   color: black !important;
 }
 
-body .apply-account .container form span {
+body .apply-account .container form label span {
   color: #db5335;
   margin-left: 3px;
 }

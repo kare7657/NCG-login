@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!-- jQuery 日期選擇器-->
     <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="scss/select2.min.css">
+    <link rel="stylesheet" href="scss/select2-bootstrap4.min.css">
     <link rel="stylesheet" href="scss/style.css">
 
     <style>
@@ -123,7 +126,7 @@
         <div class="container">
             <form>
                 <div class="form-gp">
-                    <label for="action-name">所屬機關單位<span>*</span></label>
+                    <label>所屬機關單位<span>*</span></label>
                     <p>民政處自治行政科 / 376480000AU10000001</p>
                 </div>
                 <div class="form-gp">
@@ -137,13 +140,13 @@
                 </div>
                 <div class="form-gp">
                     <div class="w50">
-                    <label for="lastname">姓<span>*</span></label>
-                    <input type="text" name="lastname" id="lastname">
+                        <label for="lastname">姓<span>*</span></label>
+                        <input type="text" name="lastname" id="lastname">
                     </div>
                     <div class="w50">
 
-                    <label for="firstname">名<span>*</span></label>
-                    <input type="text" name="firstname" id="firstname">
+                        <label for="firstname">名<span>*</span></label>
+                        <input type="text" name="firstname" id="firstname">
                     </div>
                 </div>
                 <div class="form-gp">
@@ -161,7 +164,19 @@
                 </div>
                 <div class="form-gp">
                     <label for="professional-title">職稱<span>*</span></label>
-                    <input type="text" name="professional-title" id="professional-title">
+                    <!-- <input type="text" name="professional-title" id="professional-title"> -->
+                    <select class="select2 select2bs4" id="professional-title">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                        <option>option 5</option>
+                        <option>option 6</option>
+                        <option>option 7</option>
+                        <option>option 8</option>
+                        <option>option 9</option>
+                        <option>option 10</option>
+                    </select>
                 </div>
                 <div class="form-gp">
                     <label for="address">通訊住址</label>
@@ -210,6 +225,21 @@
     <!-- InputMask 限制輸入格式-->
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.inputmask.bundle.js"></script>
+    <!-- Select2 -->
+    <script src="js/select2.full.min.js"></script>
+
+    <!-- Select2 -->
+    <script>
+        $(function () {
+            //Initialize Elements
+            $('.select2').select2();
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+
+        })
+    </script>
 
     <!-- JQ datepicker -->
     <script>

@@ -496,6 +496,10 @@
                 background-color: $gray;
             }
         }
+        .select2 {
+            width: 100%;
+            margin: $margin-XS/2 0;
+        }
         textarea {
             width: 100%;
             border-radius: 5px;
@@ -518,7 +522,7 @@
         }
     }
 
-    span {
+    label span {
         color: $red;
         margin-left: 3px;
     }
