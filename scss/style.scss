@@ -147,6 +147,37 @@ body {
                 @include mobile-L {
                     margin-top: $margin-XS * 1.75;
                 }
+                //checkbox
+                .form-check {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: $margin-XS;
+                    input,
+                    select {
+                        text-align: left;
+                        &[type="radio"] {
+                            width: 20px;
+                            height: 20px;
+                            margin: 0;
+                            border: 1px solid $light-sky;
+                        }
+                    }
+                    label {
+                        width: auto;
+                        margin: 0;
+                        padding: 0;
+                        margin: 0 $margin-XS * 1.5;
+                        margin-left: $margin-XS/1.5;
+                        color: $text;
+                        font-size: $size-h4;
+                        @include mobile-XS() {
+                            margin: 0 $margin-XS;
+                            margin-left: $margin-XS/2;
+                        }
+                    }
+                }
                 //圖片驗證碼
                 .code-gp {
                     width: 100%;

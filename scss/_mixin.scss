@@ -522,6 +522,72 @@
         }
     }
 
+    //checkbox
+    .form-check {
+        width: 100%;
+        padding: 0 $padding-S;
+        margin: 0;
+        margin-bottom: $margin-S;
+        @include web-S {
+            padding: 0;
+        }
+        @include pad() {
+            padding: 0 $padding-S * 1.5;
+            flex-direction: column;
+        }
+        @include mobile-L() {
+            padding: 0 $padding-XS * 1.5;
+        }
+        input,
+        select {
+            text-align: left;
+            &[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                line-height: $size-h4 * 2;
+                margin-top: 8px;
+                border: 1px solid $light-sky;
+            }
+        }
+        select {
+            width: 100%;
+            height: 40px;
+        }
+        label {
+            padding: 0;
+            margin: 0 $margin-S;
+            color: $text;
+            font-size: $size-p;
+        }
+        .form-check-label {
+            line-height: $size-h4 * 2;
+            margin: 0 $margin-XS * 2 $margin-XS $margin-S;
+        }
+        .form-check-input {
+            margin-left: 0px;
+        }
+        .check-input {
+            background-color: #fff;
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid $light-sky;
+            padding: 0 $padding-XXS;
+            color: $text;
+            font-size: $size-h4;
+            line-height: $size-h4;
+            margin: $margin-XS 0;
+        }
+        .h4 {
+            color: $blue;
+            font-size: $size-h4;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            margin-bottom: $margin-XS;
+        }
+    }
+
     label span {
         color: $red;
         margin-left: 3px;
