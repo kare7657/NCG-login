@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NCG EIP</title>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="scss/adminlte.min.css">
+    <!-- JQ UI -->
+    <link rel="stylesheet" href="scss/jquery-ui.css" />
 
     <link rel="stylesheet" href="scss/style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
@@ -56,7 +60,7 @@
                 </div>
                 <div class="btn-gp">
                     <input type="submit" value="登入" class="btn">
-                    <input type="button" value="忘記密碼" class="btn">
+                    <input type="button" value="忘記密碼" class="btn" data-toggle="modal" data-target="#Modal-2">
                 </div>
             </form>
 
@@ -91,6 +95,29 @@
         <p>版權所有 © 2020 南投縣政府</p>
     </footer>
 
+    <!-- Modal-2-->
+    <div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-2-Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Modal-2-Title">測試</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   測試測試
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <script>
         //登入方式
@@ -119,6 +146,13 @@
             login_CDC_TAB.classList.toggle("active")
         }
         console.error;
+    </script>
+
+    <!-- modal -->
+    <script>
+        $(".modal2-btn").click(function () {
+            $('#Modal-2').modal({ backdrop: 'static', keyboard: false });
+        });
     </script>
 </body>
 

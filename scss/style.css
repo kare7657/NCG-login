@@ -601,7 +601,7 @@ body .login-body .login-group .login-bot {
   display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
