@@ -24,7 +24,6 @@ body {
     padding: 0;
     font-size: $size-p;
     font-family: "Noto Sans TC", sans-serif, "微軟正黑體";
-    background-image: url("../img/bgimg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,10 +149,12 @@ body {
                 //checkbox
                 .form-check {
                     display: flex;
+                    justify-content: center;
                     align-items: center;
                     width: 100%;
                     margin: 0;
                     margin-bottom: $margin-XS;
+                    padding-left: 0;
                     input,
                     select {
                         text-align: left;
@@ -172,6 +173,9 @@ body {
                         margin-left: $margin-XS/1.5;
                         color: $text;
                         font-size: $size-h4;
+                        &:last-child{
+                            margin-right: 0;
+                        }
                         @include mobile-XS() {
                             margin: 0 $margin-XS;
                             margin-left: $margin-XS/2;
@@ -233,7 +237,7 @@ body {
                             }
                         }
                         .reform {
-                            height: 25px;
+                            height: 20px;
                             margin: 0;
                         }
                     }
