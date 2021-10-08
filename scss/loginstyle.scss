@@ -79,7 +79,7 @@ body {
                 width: 100%;
                 text-align: center;
                 .logo {
-                    width: 200px;
+                    max-width: 200px;
                     object-fit: contain;
                     margin-bottom: $margin-XS/4;
                     @include mobile-L {
