@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NCG EIP-新增人員</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <script src="fontawesome-free-6.1.1-web/js/fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
     <!-- jQuery 日期選擇器-->
     <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
     <!-- Select2 -->
     <link rel="stylesheet" href="scss/select2.min.css">
     <link rel="stylesheet" href="scss/select2-bootstrap4.min.css">
+       <!-- css -->
     <link rel="stylesheet" href="scss/loginstyle.css">
 
     <style>
@@ -119,7 +120,7 @@
 <body class="page">
     <section class="apply-account">
         <div class="title">
-            <img src="img/logo-single.png" alt="" class="logo-single">
+            <img src="img/brand.gif" alt="" class="logo-single">
             <h2>新增人員</h2>
         </div>
 
@@ -147,6 +148,40 @@
 
                         <label for="firstname">名<span>*</span></label>
                         <input type="text" name="firstname" id="firstname">
+                    </div>
+                </div>
+                <div class="form-gp">
+                    <label for="birthday">性別</label>
+                    <div class="check-gp">
+                        <div class="form-check">
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">男</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">女</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-gp">
+                    <label for="birthday">checkbox</label>
+                    <div class="check-gp">
+                        <div class="form-check">
+                            <input type="checkbox" name="checkbox" id="checkbox1" value="checkbox1">
+                            <label for="checkbox1">1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="checkbox" id="checkbox2" value="checkbox2">
+                            <label for="checkbox2">2</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="checkbox" id="checkbox3" value="checkbox3">
+                            <label for="checkbox3">3</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="checkbox" id="checkbox4" value="checkbox4">
+                            <label for="checkbox4">4</label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-gp">
@@ -192,7 +227,23 @@
                 </div>
                 <div class="form-gp">
                     <label for="tel">聯絡電話<span>*</span></label>
-                    <input type="tel" name="tel" id="tel">
+                    <div class="tel">
+                        <input type="tel" name="tel" id="tel" class="w20" placeholder="00">
+                        <span>-</span>
+                        <input type="tel" name="tel" id="tel" class="w80" placeholder="12345678">
+                    </div>
+                </div>
+                <div class="form-gp">
+                    <label for="tel">聯絡電話<span>*</span></label>
+                    <div class="tel">
+                        <input type="tel" name="tel" id="tel" class="w20" placeholder="00">
+                        <span>-</span>
+                        <div class="w80">
+                            <input type="tel" name="tel" id="tel" class="w80" placeholder="12345678">
+                            <span>#</span>
+                            <input type="tel" name="tel" id="tel" class="w20" placeholder="分機">
+                        </div>
+                    </div>
                 </div>
                 <div class="form-gp">
                     <label for="tel-office">公務電話</label>

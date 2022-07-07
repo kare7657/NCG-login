@@ -36,7 +36,7 @@
 }
 // 通用
 @mixin all() {
-    font-family: "微軟正黑體" !important;
+    font-family: "微軟正黑體";
     box-sizing: border-box !important;
 
     h1 {
@@ -94,15 +94,6 @@
     h5,
     h6 {
         font-weight: bold;
-    }
-    //font-awesome
-    .fa,
-    .fas,
-    .far,
-    .fal,
-    .fad,
-    .fab {
-        font-family: "Font Awesome 5 Free" !important;
     }
     .clearfix {
         clear: both;
@@ -404,14 +395,14 @@
     @include mobile-L() {
         border-radius: unset;
         margin-bottom: 0;
-        padding: 0 $padding-XS/2;
+        padding: 0;
     }
-
+    
     .form-gp {
         margin: 0;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
         margin-bottom: $margin-XS;
@@ -419,13 +410,26 @@
         .w50 {
             width: 50%;
             &:not(:last-child) {
-                padding-right: $padding-XS;
+                padding-right: $margin-XS;
             }
             @include mobile-L() {
                 width: 100%;
-                &:not(:last-child) {
-                    padding-right: 0;
-                }
+            }
+        }
+        .tel {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .w80 {
+                width: 75%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .w20 {
+                width: 20%;
+            }
+            span {
+                color: $gray;
             }
         }
         p {
@@ -520,76 +524,57 @@
                 color: $title-BK !important;
             }
         }
-    }
-
-    //checkbox
-    .form-check {
-        width: 100%;
-        padding: 0 $padding-S;
-        margin: 0;
-        margin-bottom: $margin-S;
-        @include web-S {
-            padding: 0;
-        }
-        @include pad() {
-            padding: 0 $padding-S * 1.5;
-            flex-direction: column;
-        }
-        @include mobile-L() {
-            padding: 0 $padding-XS * 1.5;
-        }
-        input,
-        select {
-            text-align: left;
-            &[type="checkbox"] {
-                width: 20px;
-                height: 20px;
-                line-height: $size-h4 * 2;
+        //checkbox
+        .check-gp {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            margin-top: 12px;
+            .form-check {
+                display: flex;
+                align-items: center;
+                margin-bottom: $padding-XXS/2;
+            }
+            input {
+                // height: 30px;
+                margin-left: 0px;
                 margin-top: 8px;
-                border: 1px solid $light-sky;
+                &[type="checkbox"],
+                &[type="radio"] {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0;
+                    // margin-top: 12px;
+                    border: 1px solid $light-sky;
+                }
+            }
+            select {
+                width: 100%;
+                height: 40px;
+            }
+            label {
+                width: unset;
+                // padding: 0;
+                color: $text;
+                font-size: $size-p;
+                margin-left: $padding-XXS;
+                margin-right: $margin-XS;
+                line-height: 2;
+            }
+            .h4 {
+                color: $blue;
+                font-size: $size-h4;
+                font-weight: bold;
+                padding: 0;
+                margin: 0;
+                margin-bottom: $margin-XS;
             }
         }
-        select {
-            width: 100%;
-            height: 40px;
-        }
-        label {
-            padding: 0;
-            margin: 0 $margin-S;
-            color: $text;
-            font-size: $size-p;
-        }
-        .form-check-label {
-            line-height: $size-h4 * 2;
-            margin: 0 $margin-XS * 2 $margin-XS $margin-S;
-        }
-        .form-check-input {
-            margin-left: 0px;
-        }
-        .check-input {
-            background-color: #fff;
-            width: 100%;
-            height: 40px;
-            border-radius: 5px;
-            border: 1px solid $light-sky;
-            padding: 0 $padding-XXS;
-            color: $text;
-            font-size: $size-h4;
-            line-height: $size-h4;
-            margin: $margin-XS 0;
-        }
-        .h4 {
-            color: $blue;
-            font-size: $size-h4;
-            font-weight: bold;
-            padding: 0;
-            margin: 0;
-            margin-bottom: $margin-XS;
-        }
-    }
 
-    label span {
-        color: $red;
-        margin-left: 3px;
+        label span {
+            color: $red;
+            margin-left: 3px;
+        }
     }
 }
