@@ -77,10 +77,8 @@
 }
 * input[type=button],
 * select {
-  -webkit-appearance: none;
-  /* Safari & Chrome */
-  -moz-appearance: none;
-  /* FireFox */
+  -webkit-appearance: none; /* Safari & Chrome */
+  -moz-appearance: none; /* FireFox */
   appearance: none;
 }
 * label {
@@ -693,6 +691,9 @@ body .apply-account {
   padding: 1.25rem 0;
   padding-bottom: 0;
   text-align: center;
+}
+body .apply-account .title .logo {
+  width: 200px;
 }
 body .apply-account .container .searchbar {
   display: flex;

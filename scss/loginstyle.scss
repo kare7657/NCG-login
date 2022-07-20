@@ -327,6 +327,11 @@ body {
         padding: $padding-XS/1.5 0;
         padding-bottom: 0;
         text-align: center;
+        .title{
+            .logo{
+                width: 200px;
+            }
+        }
         .container {
             .searchbar {
                 @include searchbar();
