@@ -45,6 +45,7 @@
         letter-spacing: 0.7px;
         padding: 0;
         margin: 0;
+        font-weight: normal;
     }
     h2 {
         font-size: $size-h2;
@@ -65,6 +66,9 @@
         color: $text;
         padding: 0;
         margin: 0;
+        font-weight: normal !important;
+        color: black;
+        margin-bottom: $padding-XXS;
     }
     p {
         font-size: $size-p;
@@ -122,32 +126,37 @@
     }
     //表單
     label {
-        width: 25%;
+        width: 30%;
         height: 30px;
         font-size: $size-h4;
         color: $text;
         line-height: 30px;
         text-align: left;
         font-weight: bold;
+        margin-bottom: 0;
         @include mobile-L() {
-            width: 30%;
-            margin: $margin-XS/1.5 0;
-            margin-bottom: $margin-XS/2.5;
+            width: 34%;
+        }
+        @include mobile-XS() {
+            width: 40%;
         }
     }
     input {
-        width: 75%;
+        width: 70%;
         height: 30px;
         line-height: 30px;
+        margin-bottom: $margin-XS/1.5;
         outline: 0;
         border-width: 0 0 2px;
         border-color: #dcdcdd;
         font-size: $size-p;
-        margin-bottom: $margin-XS/1.5;
         @include mobile-L() {
-            width: 70%;
+            width: 66%;
             margin: $margin-XS/1.5 0;
             margin-top: 0;
+        }
+        @include mobile-XS() {
+            width: 60%;
         }
         &[type="submit"],
         &[type="reset"],
@@ -190,8 +199,8 @@
     }
     button {
         height: 40px;
-        background-color: $blue;
-        color: $title-W;
+        background-color: $blue !important;
+        color: $title-W !important;
         font-size: $size-p;
         font-weight: bold !important;
         line-height: 40px;
@@ -216,8 +225,9 @@
         background: url("/img/chevron-down-solid.svg") no-repeat scroll transparent;
         background-position: 98% center;
         background-color: #fff;
-        color: #000;
-        border: solid 1px #000;
+        color: $text;
+        border-radius: 4px;
+        border: solid 1px $gray;
     }
 
     table:not(.ui-datepicker-calendar) {
@@ -300,6 +310,194 @@
         background-color: #fff;
         padding: $padding-XS;
         padding-bottom: $padding-XS * 1.5;
+        @include mobile-L() {
+            min-width: unset;
+        }
+    }
+
+    //modal
+    .modal {
+        padding: 0;
+        .modal-dialog {
+            max-width: 650px;
+            @include mobile-L() {
+                padding: 0 $padding-XXS;
+            }
+            .modal-content {
+                border-radius: 15px;
+                .modal-header {
+                    width: 100%;
+                    border-bottom: none;
+                    padding: 0;
+                    margin: $margin-XS 0;
+                    .modal-title {
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .close {
+                        position: absolute;
+                        top: 16px;
+                        right: 16px;
+                        background-color: transparent !important;
+                        color: $text !important;
+                        padding: 0;
+                        span {
+                            padding: $padding-XXS 15px;
+                        }
+                    }
+                }
+                .modal-body {
+                    width: 100%;
+                    margin: auto;
+                    padding: 0 $padding-S;
+                    margin-bottom: $margin-XS;
+                    @include mobile-L() {
+                        padding: 0 $padding-XS;
+                    }
+                    .form-gp {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        margin-bottom: $padding-XS;
+                        @include mobile-L() {
+                            margin-bottom: $padding-XXS;
+                        }
+                        label {
+                            width: 30%;
+                            font-size: $size-h4;
+                            line-height: 1.5;
+                            font-weight: bold;
+                            color: black;
+                            margin: 0;
+                            @include mobile-L() {
+                                width: 100%;
+                            }
+                        }
+                        input,
+                        select {
+                            width: 70%;
+                            margin-bottom: 0;
+                            @include mobile-L() {
+                                width: 100%;
+                            }
+                        }
+                        .text {
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            font-size: $size-p;
+                            .notice {
+                                margin-top: $margin-XS;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    //圖片驗證碼
+                    .code-gp {
+                        width: 100%;
+                        padding: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-bottom: $margin-XS;
+                        @include web-S {
+                            justify-content: start;
+                        }
+                        @include mobile-L() {
+                            margin-bottom: $margin-S;
+                        }
+                        label {
+                            width: 30%;
+                            text-align: left;
+                            margin-bottom: 0;
+                            color: black;
+                            @include mobile-L() {
+                                width: 30%;
+                            }
+                        }
+                        .text-gp {
+                            width: 70%;
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            @include mobile-L() {
+                                width: 100%;
+                                justify-content: start;
+                                flex-wrap: wrap;
+                            }
+                            .code {
+                                width: 35%;
+                                margin-right: 10px;
+                                margin-bottom: 0;
+                                @include mobile-L() {
+                                    width: 45%;
+                                    justify-content: space-between;
+                                }
+                                @include mobile-XS() {
+                                    width: 100%;
+                                    margin-right: 0;
+                                    margin-bottom: $margin-XS;
+                                }
+                            }
+                            .RP {
+                                height: 25px;
+                                margin: 0;
+                                margin-right: 10px;
+                                @include web-L {
+                                    width: auto;
+                                    max-height: unset;
+                                    height: 30px;
+                                }
+                                @include mobile-L() {
+                                    height: 35px;
+                                    margin-left: 0;
+                                }
+                                @include mobile-XS() {
+                                    height: 30px;
+                                }
+                            }
+                            .reform {
+                                height: 20px;
+                                width: 20px;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    h6 {
+                        margin-bottom: $padding-XXS;
+                    }
+                    p {
+                        margin-bottom: $margin-S;
+                        &.notice {
+                            text-align: right;
+                        }
+                    }
+                }
+                .modal-footer {
+                    border-top: none;
+                    margin-bottom: $margin-S;
+                    padding: 0;
+                    padding: 0 $padding-S;
+                    @include mobile-L() {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 $padding-XS;
+                    }
+                    button {
+                        margin-top: 0;
+                        @include mobile-L() {
+                            width: 100%;
+                            &:not(:first-child) {
+                                margin-top: $margin-S;
+                                @include mobile-L {
+                                    margin-top: $margin-XS;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     //頁碼
@@ -397,7 +595,7 @@
         margin-bottom: 0;
         padding: 0;
     }
-    
+
     .form-gp {
         margin: 0;
         width: 100%;
@@ -405,7 +603,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: $margin-XS;
+        margin-bottom: $padding-XS;
         text-align: left;
         .w50 {
             width: 50%;
@@ -414,6 +612,9 @@
             }
             @include mobile-L() {
                 width: 100%;
+                &:not(:last-child) {
+                    padding-right: 0;
+                }
             }
         }
         .tel {
@@ -428,8 +629,42 @@
             .w20 {
                 width: 20%;
             }
+
             span {
                 color: $gray;
+            }
+        }
+        .mail {
+            width: 100%;
+            display: flex;
+            @include mobile-L() {
+                flex-wrap: wrap;
+            }
+            .w40 {
+                width: 40%;
+                @include mobile-L() {
+                    width: 50%;
+                }
+                @include mobile-XS() {
+                    width: 100%;
+                }
+            }
+            .w60 {
+                width: 60%;
+                @include mobile-L() {
+                    width: 50%;
+                }
+                @include mobile-XS() {
+                    width: 100%;
+                }
+            }
+            p {
+                padding-left: $padding-XXS;
+
+                @include mobile-XS() {
+                    padding: 0;
+                    margin-bottom: $padding-XXS;
+                }
             }
         }
         p {
@@ -450,7 +685,7 @@
             width: 100%;
             padding: 0;
             margin-right: $margin-M;
-            color: $blue;
+            color: black;
             font-size: $size-h4;
             font-weight: bold;
         }
@@ -535,6 +770,7 @@
                 display: flex;
                 align-items: center;
                 margin-bottom: $padding-XXS/2;
+                padding-left: 0;
             }
             input {
                 // height: 30px;
@@ -575,6 +811,63 @@
         label span {
             color: $red;
             margin-left: 3px;
+        }
+    }
+    .form-gp-headshot {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include mobile-L() {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .input-gp {
+            width: calc(100% - 170px);
+            margin-right: $margin-S;
+            @include mobile-L() {
+                width: 100%;
+            }
+        }
+        .headshot-gp {
+            text-align: right;
+            width: 140px;
+            @include mobile-L() {
+                text-align: center;
+                width: 100%;
+                margin-bottom: $margin-XS;
+            }
+            img.headshot {
+                object-fit: contain;
+                width: 140px;
+                border-radius: 8px;
+                @include mobile-L() {
+                    width: 160px;
+                    margin-top: 0;
+                }
+                @include mobile-XS() {
+                    width: 130px;
+                }
+            }
+            .btn {
+                width: 140px;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                @include mobile-L() {
+                    margin: auto;
+                    width: 160px;
+                }
+                @include mobile-XS() {
+                    width: 130px;
+                }
+                .more {
+                    width: 46%;
+                    text-align: center;
+                    margin-top: $padding-XXS;
+                    padding: 0;
+                }
+            }
         }
     }
 }

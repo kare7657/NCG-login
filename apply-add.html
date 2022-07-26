@@ -151,15 +151,39 @@
                     </div>
                 </div>
                 <div class="form-gp">
-                    <label for="birthday">性別</label>
-                    <div class="check-gp">
-                        <div class="form-check">
-                            <input type="radio" name="gender" id="male" value="male">
-                            <label for="male">男</label>
+                    <label for="birthday">生日</label>
+                    <input type="text" class="western-date mb-nokeyboard" name="birthday" id="birthday"
+                        placeholder="yyyy/mm/dd">
+                </div>
+                <div class="form-gp-headshot">
+                    <div class="input-gp">
+                        <div class="form-gp">
+                            <label for="birthday">性別</label>
+                            <div class="check-gp">
+                                <div class="form-check">
+                                    <input type="radio" name="gender" id="male" value="male">
+                                    <label for="male">男</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" name="gender" id="female" value="female">
+                                    <label for="female">女</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input type="radio" name="gender" id="female" value="female">
-                            <label for="female">女</label>
+                        <div class="form-gp">
+                            <label for="download">檔案下載<span>*</span></label>
+                            <input type="file" name="download" id="download">
+                        </div>
+                    </div>
+                    <div class="headshot-gp">
+                        <img src="img/headshot_male.jpg" alt="" class="headshot">
+                        <div class="btn">
+                            <button class="more" type="button" onclick="javascript:location.href=''">
+                                上傳
+                            </button>
+                            <button class="more" type="button" onclick="javascript:location.href=''">
+                                刪除
+                            </button>
                         </div>
                     </div>
                 </div>
