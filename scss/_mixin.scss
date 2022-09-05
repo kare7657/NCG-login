@@ -850,22 +850,26 @@
                 }
             }
             .btn {
-                width: 140px;
                 padding: 0;
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-between;
                 @include mobile-L() {
                     margin: auto;
-                    width: 160px;
+                    width: 180px;
+                    justify-content: center;
                 }
                 @include mobile-XS() {
                     width: 130px;
                 }
                 .more {
-                    width: 46%;
                     text-align: center;
                     margin-top: $padding-XXS;
-                    padding: 0;
+                    padding: 0 8px;
+                    @include mobile-L(){
+                        padding: 0;
+                        width: 100%;
+                    }
                 }
             }
         }

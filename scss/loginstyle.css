@@ -1309,15 +1309,16 @@ body .apply-account .container form .form-gp-headshot .headshot-gp img.headshot 
   }
 }
 body .apply-account .container form .form-gp-headshot .headshot-gp .btn {
-  width: 140px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 @media (max-width: 568px) {
   body .apply-account .container form .form-gp-headshot .headshot-gp .btn {
     margin: auto;
-    width: 160px;
+    width: 180px;
+    justify-content: center;
   }
 }
 @media (max-width: 320px) {
@@ -1326,10 +1327,15 @@ body .apply-account .container form .form-gp-headshot .headshot-gp .btn {
   }
 }
 body .apply-account .container form .form-gp-headshot .headshot-gp .btn .more {
-  width: 46%;
   text-align: center;
   margin-top: 0.625rem;
-  padding: 0;
+  padding: 0 8px;
+}
+@media (max-width: 568px) {
+  body .apply-account .container form .form-gp-headshot .headshot-gp .btn .more {
+    padding: 0;
+    width: 100%;
+  }
 }
 body .apply-account .container form .form-gp input {
   height: initial;
