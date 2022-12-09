@@ -8,8 +8,8 @@
     <!-- Font Awesome Icons -->
     <script src="fontawesome-free-6.1.1-web/js/fontawesome-kit.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
-    <!-- jQuery 日期選擇器-->
-    <link rel="stylesheet" href="scss/jquery-ui-1.10.0.custom.min.css" />
+    <!-- JQ UI -->
+    <link rel="stylesheet" href="scss/jquery-ui.css" />
     <!-- Select2 -->
     <link rel="stylesheet" href="scss/select2.min.css">
     <link rel="stylesheet" href="scss/select2-bootstrap4.min.css">
@@ -153,7 +153,7 @@
                 <div class="form-gp">
                     <label for="birthday">生日</label>
                     <input type="text" class="western-date mb-nokeyboard" name="birthday" id="birthday"
-                        placeholder="yyyy/mm/dd">
+                        placeholder="yyyy-mm-dd">
                 </div>
                 <div class="form-gp-headshot">
                     <div class="input-gp">
@@ -296,7 +296,7 @@
 
     <!-- jQuery 日期選擇器-->
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.1.10.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <!-- InputMask 限制輸入格式-->
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.inputmask.bundle.js"></script>
@@ -416,7 +416,7 @@
     <!-- input mask -->
     <script>
         $(document).ready(function () {
-            $(".western-date").inputmask({ alias: "datetime", inputFormat: "yyyy/mm/dd" });
+            $(".western-date").inputmask({ alias: "datetime", inputFormat: "yyyy-mm-dd" });
             // $(".chinese-date").inputmask({ alias: "datetime", inputFormat: "yyy/mm/dd" });
         });
     </script>

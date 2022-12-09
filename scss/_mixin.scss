@@ -314,7 +314,6 @@
             min-width: unset;
         }
     }
-
     //modal
     .modal {
         padding: 0;
@@ -866,7 +865,7 @@
                     text-align: center;
                     margin-top: $padding-XXS;
                     padding: 0 8px;
-                    @include mobile-L(){
+                    @include mobile-L() {
                         padding: 0;
                         width: 100%;
                     }
