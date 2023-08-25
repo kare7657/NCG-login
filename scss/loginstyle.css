@@ -728,6 +728,26 @@ body .login-body .login-group .login-bot {
     margin-top: 2.1875rem;
   }
 }
+body .login-body .login-group .login-bot .text-gp {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+body .login-body .login-group .login-bot .text-gp input[type=password] {
+  padding-right: 34px;
+}
+body .login-body .login-group .login-bot .text-gp .view-btn {
+  color: #ccc;
+  position: absolute;
+  right: 0px;
+  font-size: 1rem;
+  padding: 4px 8px;
+  margin-top: -3px;
+  background-color: white;
+}
+body .login-body .login-group .login-bot .text-gp .view-btn.active {
+  margin-top: 1px;
+}
 body .login-body .login-group .login-bot .form-check {
   display: flex;
   justify-content: center;

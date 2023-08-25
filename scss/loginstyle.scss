@@ -156,6 +156,26 @@ body {
                 @include mobile-L {
                     margin-top: $margin-XS * 1.75;
                 }
+                .text-gp {
+                    width: 100%;
+                    display: flex;
+                    position: relative;
+                    input[type="password"] {
+                        padding-right: 34px;
+                    }
+                    .view-btn {
+                        color: #ccc;
+                        position: absolute;
+                        right: 0px;
+                        font-size: $size-p;
+                        padding: 4px 8px;
+                        margin-top: -3px;
+                        background-color: white;
+                        &.active {
+                            margin-top: 1px;
+                        }
+                    }
+                }
                 //checkbox
                 .form-check {
                     display: flex;
@@ -383,9 +403,9 @@ body {
                         height: initial;
                     }
                 }
-                .form-submit{
-                    button{
-                        @include mobile-L{
+                .form-submit {
+                    button {
+                        @include mobile-L {
                             width: 100%;
                         }
                     }
